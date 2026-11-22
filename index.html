@@ -8,6 +8,27 @@
 </head>
 <body>
 
+<h1 id="holiday_banner">Καλά Χριστούγεννα!</h1>
+
+  <div class="snow-container" id="snow"></div>
+
+<script>
+  const snowContainer = document.getElementById('snow');
+  const flakeCount = 40; // Adjust for heavier or lighter snow
+
+  for (let i = 0; i < flakeCount; i++) {
+    const flake = document.createElement('div');
+    flake.className = 'snowflake';
+    flake.innerHTML = '❄';
+    flake.style.left = Math.random() * 100 + 'vw';
+    flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    flake.style.animationDelay = Math.random() * 5 + 's';
+    flake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+    flake.style.opacity = Math.random();
+    snowContainer.appendChild(flake);
+  }
+</script>
+
 <div class="timetable">
   <button class="button" type="button" onclick="this.nextElementSibling.classList.toggle('hidden')" style="padding: 15px 32px; font-size: 18px; border-radius: 25px;">
     <span>Γ1</span>
